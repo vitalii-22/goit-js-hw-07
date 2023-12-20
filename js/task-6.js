@@ -39,6 +39,4 @@ linkBtnCreate.addEventListener("click", () =>
   createBoxes(Number(linkInput.value))
 );
 
-linkBtnDestroy.addEventListener("click", () => {
-  linkBoxes.innerHTML = "";
-});
+linkBtnDestroy.addEventListener("click", () => destroyBoxes());
