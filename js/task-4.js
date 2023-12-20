@@ -5,13 +5,13 @@ linkForm.addEventListener("submit", handleSubmit);
 function handleSubmit(e) {
   e.preventDefault();
   const form = e.target;
-  const email = form.elements.email.value.trim();
-  const password = form.elements.password.value.trim();
+  const emailInput = form.elements.email.value.trim();
+  const passwordInput = form.elements.password.value.trim();
 
-  if (email === "" || password === "") {
+  if (emailInput === "" || passwordInput === "") {
     return alert("All form fields must be filled in");
   }
 
-  console.log(`Email: ${email}, Password: ${password}`);
+  console.log({ email: emailInput, password: passwordInput });
   form.reset();
 }

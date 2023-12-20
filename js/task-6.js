@@ -15,24 +15,23 @@ function destroyBoxes() {
 }
 
 function createBoxes(amount) {
-  let syze = 30;
-  const masDiv = [];
   if (amount >= 1 && amount <= 100) {
     linkInput.value = "";
     destroyBoxes();
+    const masDiv = [];
+    let size = 30;
+
     for (let i = 1; i <= amount; i++) {
       const divEl = document.createElement("div");
 
-      syze += 10;
-
-      divEl.style.width = `${syze}px`;
-      divEl.style.height = `${syze}px`;
+      divEl.style.width = `${size}px`;
+      divEl.style.height = `${size}px`;
       divEl.style.backgroundColor = getRandomHexColor();
+      size += 10;
       masDiv.push(divEl);
     }
+    linkBoxes.append(...masDiv);
   }
-  linkBoxes.append(...masDiv);
-  console.log(masDiv);
 }
 
 linkBtnCreate.addEventListener("click", () =>
